@@ -1,47 +1,26 @@
-import { useState } from "react";
+import { Title } from "../Description/Description";
+// import { Descr } from "../Description/Description";
+import { Button } from "../Button/Button";
+import { Options } from "../Options/Options";
+import { Feedback } from "../Feedback/Fedback";
 import "./App.css";
 
 export const App = () => {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1>Sip Happens Café</h1>
+      <Title text="Sip Happens Café" />
       <p>
         Please leave your feedback about our service by selecting one of the
         options below.
       </p>
-      <ul className="options">
-        <li>
-          <button onClick={() => setCount((count) => count + 1)}>
-            Good
-            {count}
-          </button>
-        </li>
-        <li>
-          <button onClick={() => setCount((count) => count + 1)}>
-            Neutral {count}
-          </button>
-        </li>
-        <li>
-          <button onClick={() => setCount((count) => count + 1)}>
-            Bad {count}
-          </button>
-        </li>
-        <li>
-          <button onClick={() => setCount((count) => count + 1)}>
-            Reset {count}
-          </button>
-        </li>
-      </ul>
+      {/* <Descr
+        descr="Please leave your feedback about our service by selecting one of the
+        options below."
+      /> */}
 
-      <ul className="feedback">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <Button />
+      <Options />
+      <Feedback />
     </>
   );
 };
