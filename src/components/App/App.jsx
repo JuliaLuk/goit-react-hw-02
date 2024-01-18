@@ -1,7 +1,7 @@
 import { Title } from "../Description/Description";
 // import { Descr } from "../Description/Description";
 import { Button } from "../Button/Button";
-import { Options } from "../Options/Options";
+import { OptionsBtn } from "../Options/Options";
 import { Feedback } from "../Feedback/Fedback";
 import "./App.css";
 
@@ -19,7 +19,7 @@ export const App = () => {
       /> */}
 
       <Button />
-      <Options />
+      <OptionsBtn />
       <Feedback />
     </>
   );
