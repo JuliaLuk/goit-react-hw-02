@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const OptionsBtn = () => {
-  const [good, setGoods] = useState(0);
+  const [good, setGoods] = useState(() => {
+    const savedClicks = window.localStorage.getItem("ile good");
+    if (savedClicks !== null) {
+      return JSON.parse(savedClicks);
+    }
+    return 0;
+  });
   const [neutral, setNeutrals] = useState(0);
   const [bad, setBads] = useState(0);
+
+  useEffect(() => {
+    console.log("code inside useEfect", good);
+    window.localStorage.setItem("ile good", good);
+  }, [good]);
 
   const handleGoods = () => {
     setGoods(good + 1);
